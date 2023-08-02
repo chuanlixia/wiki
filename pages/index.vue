@@ -1,3 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+navigateTo("/frameworks/nuxt");
+</script>
 
 <template></template>

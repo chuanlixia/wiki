@@ -1,8 +1,10 @@
-import { resolve } from "path";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  ssr: false,
+  nitro: {
+    preset: "service-worker",
+  },
   modules: ["@nuxt/content", "@unocss/nuxt"],
   content: {
     markdown: {
@@ -16,8 +18,6 @@ export default defineNuxtConfig({
       theme: "nord",
     },
     documentDriven: {
-      navigation: false,
-      surround: false,
       injectPage: false,
     },
   },
